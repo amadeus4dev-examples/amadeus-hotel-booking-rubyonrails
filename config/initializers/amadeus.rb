@@ -1,3 +1,3 @@
 require 'amadeus'
 
-$amadeus = Amadeus::Client.new()
+$amadeus = Amadeus::Client.new

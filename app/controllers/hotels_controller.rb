@@ -19,7 +19,7 @@ class HotelsController < ApplicationController
       cityCode = hotel_json['hotel']['cityCode']
       checkInDate = params[:checkInDate]
       checkOutDate = params[:checkOutDate]
-      hotel_description = hotel_json['hotel']['description']['text']
+      hotel_description = hotel_json['hotel'].has_key?('description') ? hotel_json['hotel']['description']['text'] : ""
       offer_id = hotel_json['offers'].first['id']
       offer_price = hotel_json['offers'].first['price']['total']
       offer_price_currency = hotel_json['offers'].first['price']['currency']

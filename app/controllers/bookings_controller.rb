@@ -62,6 +62,6 @@ class BookingsController < ApplicationController
       raise e
     end
 
-    render action: @booking
+    render action: 'confirmed'
   end
 end
