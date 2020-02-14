@@ -18,28 +18,22 @@ cd amadeus-hotel-booking-rubyonrails
 bundle
 ```
 
-For authentication add your API key/secret to your `.bashrc` or `.zshrc` files or export then into your terminal before starting the Rails server
+For authentication add your API Key/Secret to your `.bashrc` or `.zshrc` files or export then into your terminal before starting the Rails server
 
 ```sh
 export AMADEUS_CLIENT_ID=YOUR_API_KEY
 export AMADEUS_CLIENT_SECRET=YOUR_API_SECRET
 ```
 
-You can easily switch between `test` and `production` environments by setting (default to test)
+You can easily switch between `test` and `production` environments:
 
-```
-export AMADEUS_HOSTNAME="test" # an empty value will also set the environment to test
-```
-
-or
-
-```
-export AMADEUS_HOSTNAME="production"
+```sh
+export AMADEUS_HOSTNAME="production" # Be default the environment is set to test
 ```
 
 > Each environment has different API keys. Do not forget to update them!
 
-Finally, run the Django server.
+Finally, run the Rails server.
 
 ```sh
 rails s
