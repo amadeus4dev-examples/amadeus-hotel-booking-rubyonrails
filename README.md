@@ -8,19 +8,14 @@ We recently released our hotel booking API to give you the chance to integrate h
   * The last endpoint allows you to confirm the price and the availability before booking a room
 * [Hotel Booking](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking): to book hotel room(s)
 
-## How to run the project locally
+## Development and Testing
 
-Clone the repository.
+To run the project locally, clone the repository and install the dependencies.
 
 ```sh
 git clone hhttps://github.com/amadeus4dev/amadeus-hotel-booking-rubyonrails.git
 cd amadeus-hotel-booking-rubyonrails
-```
-
-Install the dependencies
-
-```ruby
-bundle install
+bundle
 ```
 
 For authentication add your API key/secret to your `.bashrc` or `.zshrc` files or export then into your terminal before starting the Rails server
