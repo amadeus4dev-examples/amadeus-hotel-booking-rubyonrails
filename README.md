@@ -13,7 +13,7 @@ We recently released our hotel booking API to give you the chance to integrate h
 To run the project locally, clone the repository and install the dependencies.
 
 ```sh
-git clone hhttps://github.com/amadeus4dev/amadeus-hotel-booking-rubyonrails.git
+git clone https://github.com/amadeus4dev/amadeus-hotel-booking-rubyonrails.git
 cd amadeus-hotel-booking-rubyonrails
 bundle
 ```
