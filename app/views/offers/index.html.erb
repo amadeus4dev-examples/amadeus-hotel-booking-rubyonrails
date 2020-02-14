@@ -1,0 +1,18 @@
+<h1>Offers#index</h1>
+<div class="modal-body row">
+  <div class="col-md-12 offset-3">
+    <% @offers_list.each do |offer| %>
+      <div class="card mb-3 text-center" style="max-width: 40rem;">
+        <div class="nounderline card-header text-center" style="font-size: 26;color: darkred;"><%= offer.offer_total_price %> <%= offer.offer_price_currency %>
+          <%= button_to "Book", bookings_path, method: :get, params: { offerId: offer.offer_id }, class: "btn btn-sm" %>
+        </div>
+        <div class="card-body">
+          <div class="card-text">
+            Description: <%= offer.room_description %> / Cancellation: <%= offer.offer_cancellation_deadline %> <br/>
+            Number of beds: <%= offer.room_number_of_beds %> / Bed type: <%= offer.room_bed_type %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

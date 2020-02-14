@@ -1,0 +1,45 @@
+<h1>Bookings#index</h1>
+<%= form_with url: { :action => "book" }, local: true do |form| %>
+  <h3> Traveler information </h3>
+  <%= form.hidden_field :offer_id, :value => @offer_id %>
+  <p>
+    <%= form.label "Title" %><br>
+    <%= form.select :title, ["Mr","Mrs"] %>
+  </p>
+  <p>
+    <%= form.label "First Name" %><br>
+    <%= form.text_field :first_name, value: "Bob" %>
+  </p>
+  <p>
+    <%= form.label "Last Name " %><br>
+    <%= form.text_field :last_name, value: "Smith" %>
+  </p>
+  <p>
+    <%= form.label "Phone" %><br>
+    <%= form.text_field :phone, value: "+33679278416" %>
+  </p>
+  <p>
+    <%= form.label "Email" %><br>
+    <%= form.text_field :email, value: "bob.smith1234567890@email.com" %>
+  </p>
+  <h3> Payment information </h3>
+  <p>
+    <%= form.label"Type of card" %><br>
+    <%= form.select :type_card, ["VI","CA","AX","DC","MA","VE","UP","DL"] %>
+  </p>
+  <p>
+    <%= form.label"Card Number" %><br>
+    <%= form.text_field :card_number, value: "4151289722471370"  %>
+  </p>
+  <p>
+    <%= form.label"Expiry Date" %><br>
+    <%= form.text_field :expiry_date, value: "2021-08"  %>
+  </p>
+  <p>
+    <%= form.label"Comment" %><br>
+    <%= form.text_field :special_request, value: "I will arrive at midnight"  %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

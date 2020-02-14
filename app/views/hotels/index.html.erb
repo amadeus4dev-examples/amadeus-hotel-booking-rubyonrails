@@ -1,0 +1,26 @@
+<h1>Hotels#index</h1>
+<div class="modal-body row">
+  <div class="col-md-12 offset-3">
+    <% @hotel_list.each do |hotel| %>
+      <div class="card mb-3 text-center" style="max-width: 40rem;">
+        <div class="nounderline card-header text-center" style="font-size: 26;color: darkred;">From <%= hotel.offer_price %> <%= hotel.offer_price_currency %>
+          <%= button_to "Show prices", offers_path, method: :get, params: { hotelId: hotel.hotelId, checkInDate: hotel.checkInDate, checkOutDate: hotel.checkOutDate }, class: "btn btn-sm" %>
+        </div>
+        <div class="card-body">
+          <div class="card-text">
+            <h2 class="text-info"><%= hotel.name%><span class="text-warning">
+                <%  if hotel.rating == '1' "*"
+                                  elsif hotel.rating == '2'  "**"
+                                  elsif hotel.rating == '3'  "***"
+                                  elsif hotel.rating == '4'  "****"
+                                  else "*****"
+                                end
+                            %>
+              </span></h2>
+            <div class=""><%= hotel.hotel_description %></div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

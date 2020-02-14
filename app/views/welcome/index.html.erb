@@ -1,0 +1,19 @@
+<h1>Welcome#index</h1>
+<%= form_with url: hotels_path, method: "get", local: true do |form| %>
+  <%= form.hidden_field :paymentPolicy, :value => 'GUARANTEE' %>
+  <p>
+    <%= form.label "City" %><br>
+    <%= form.text_field :cityCode, value: "LON" %>
+  </p>
+  <p>
+    <%= form.label "Check in date" %><br>
+    <%= form.text_field :checkInDate, value: "2020-06-01" %>
+  </p>
+  <p>
+    <%= form.label"Check out date" %><br>
+    <%= form.text_field :checkOutDate, value: "2020-06-03"  %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
