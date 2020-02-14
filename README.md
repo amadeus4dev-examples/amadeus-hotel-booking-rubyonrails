@@ -6,7 +6,7 @@ We recently released our hotel booking API to give you the chance to integrate h
   * The 1st endpoint allows you to find a list of hotels in a specific city
   * The 2nd endpoint allows you to get the list of offers (rooms) for a specific hotel id (that you get by using the first endpoint)
   * The last endpoint allows you to confirm the price and the availability before booking a room
-* [Hotel Booking](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking): to book hotel room(s)
+* [Hotel Booking](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking): to book hotel rooms
 
 ## Development and Testing
 
