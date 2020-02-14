@@ -1,1 +1,0 @@
-# amadeus-hotel-booking-rubyonrails
