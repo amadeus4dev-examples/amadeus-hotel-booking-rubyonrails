@@ -6,45 +6,34 @@ We recently released our hotel booking API to give you the chance to integrate h
   * The 1st endpoint allows you to find a list of hotels in a specific city
   * The 2nd endpoint allows you to get the list of offers (rooms) for a specific hotel id (that you get by using the first endpoint)
   * The last endpoint allows you to confirm the price and the availability before booking a room
-* [Hotel Booking](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking): to book hotel room(s)
+* [Hotel Booking](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-booking): to book hotel rooms
 
-## How to run the project locally
+## Development and Testing
 
-Clone the repository.
+To run the project locally, clone the repository and install the dependencies.
 
 ```sh
-git clone hhttps://github.com/amadeus4dev/amadeus-hotel-booking-rubyonrails.git
+git clone https://github.com/amadeus4dev/amadeus-hotel-booking-rubyonrails.git
 cd amadeus-hotel-booking-rubyonrails
+bundle
 ```
 
-Install the dependencies
-
-```ruby
-bundle install
-```
-
-For authentication add your API key/secret to your `.bashrc` or `.zshrc` files or export then into your terminal before starting the Rails server
+For authentication add your API Key/Secret to your `.bashrc` or `.zshrc` files or export then into your terminal before starting the Rails server
 
 ```sh
 export AMADEUS_CLIENT_ID=YOUR_API_KEY
 export AMADEUS_CLIENT_SECRET=YOUR_API_SECRET
 ```
 
-You can easily switch between `test` and `production` environments by setting (default to test)
+You can easily switch between `test` and `production` environments:
 
-```
-export AMADEUS_HOSTNAME="test" # an empty value will also set the environment to test
-```
-
-or
-
-```
-export AMADEUS_HOSTNAME="production"
+```sh
+export AMADEUS_HOSTNAME="production" # Be default the environment is set to test
 ```
 
 > Each environment has different API keys. Do not forget to update them!
 
-Finally, run the Django server.
+Finally, run the Rails server.
 
 ```sh
 rails s
