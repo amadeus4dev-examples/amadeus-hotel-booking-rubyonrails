@@ -18,7 +18,7 @@ cd amadeus-hotel-booking-rubyonrails
 bundle
 ```
 
-For authentication add your API Key/Secret to your `.bashrc` or `.zshrc` files or export then into your terminal before starting the Rails server
+For authentication export your API Key/Secret into your terminal before starting the Rails server
 
 ```sh
 export AMADEUS_CLIENT_ID=YOUR_API_KEY
