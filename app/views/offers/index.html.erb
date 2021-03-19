@@ -9,7 +9,8 @@
         <div class="card-body">
           <div class="card-text">
             Description: <%= offer.room_description %> / Cancellation: <%= offer.offer_cancellation_deadline %> <br/>
-            Number of beds: <%= offer.room_number_of_beds %> / Bed type: <%= offer.room_bed_type %>
+            Number of beds: <%= offer.room_number_of_beds %> / Bed type: <%= offer.room_bed_type %> <br/>
+            Overall Rating: <%= @sentiments['overallRating'] %>
           </div>
         </div>
       </div>

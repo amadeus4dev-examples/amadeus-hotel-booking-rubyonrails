@@ -9,6 +9,7 @@ class OffersController < ApplicationController
     end
 
     @offers_list = []
+    hotelId = hotel_offers['hotel']['hotelId']
     hotel_offers['offers'].each do |offers_json|
       offer_id = offers_json['id']
       room_description = offers_json['room']['description']['text']
@@ -19,6 +20,12 @@ class OffersController < ApplicationController
       offer_cancellation_deadline = offers_json['policies'].has_key?("cancellation") ? offers_json['policies']['cancellation']['deadline'] : "Not cancelable"
       offer = Offer.new(offer_id, room_description, room_number_of_beds, room_bed_type, offer_total_price, offer_price_currency, offer_cancellation_deadline)
       @offers_list.append(offer)
+    end
+
+    begin
+      @sentiments = $amadeus.e_reputation.hotel_sentiments.get(hotelIds: hotelId).data
+    rescue Amadeus::ResponseError => e
+      raise e
     end
 
     render action: "index"
